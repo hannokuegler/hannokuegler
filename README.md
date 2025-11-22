@@ -1,16 +1,21 @@
-## Hi there 👋
+# 💫 About Me:
+🏗️ I'm currently working on<br>  • Flood-risk modelling with satellite & elevation data (Data Science Lab @ WU)  <br>  • a CV roasting LLM <br><br>🤝 I'm looking to collaborate on<br>  • Data science projects in finance, mobility, energy & sustainability  <br>  • ML pipelines (classification, calibration & feature engineering)  <br><br>🧪 Projects I did<br>  • Chess outcome prediction using Stockfish evals, ELO, ACPL & time features  <br>    → Implemented in R with Random Forests, Logistic Regression, PCA & calibration plots  <br>  • "Mössi Morser" — a Morse-code encoder with wireless signal transmission<br><br>🌱 I'm currently learning<br>  • LLMs<br>  • Digital innovation in AI <br>  • Spanish 🇪🇸 — preparing for a trip to Latin America  <br><br>💬 Ask me about<br>  • Emergency medical services & operations (Austrian Red Cross)  <br>  • Data Science & Business Informatics @ WU Vienna (BSc Jan 2026)  <br>  • Random Forests, feature importance & cross-validation  <br>  • GitHub workflows for student teams  <br>  • Latex<br><br>⚡ Fun fact<br>  • Grew up on a farm raising chickens 🐔 — now raising models & datasets<br>  • 195 cm, runs & powerlifts — statistically unlikely to fit into airplane legroom
 
-<!--
-**hannokuegler/hannokuegler** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
 
-Here are some ideas to get you started:
+## 🌐 Socials:
+[![Instagram](https://img.shields.io/badge/Instagram-%23E4405F.svg?logo=Instagram&logoColor=white)](https://instagram.com/hannokuegler) [![LinkedIn](https://img.shields.io/badge/LinkedIn-%230077B5.svg?logo=linkedin&logoColor=white)](https://linkedin.com/in/hannokuegler) [![email](https://img.shields.io/badge/Email-D14836?logo=gmail&logoColor=white)](mailto:hanno.kuegler@gmail.com) 
 
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+# 💻 Tech Stack:
+![Java](https://img.shields.io/badge/java-%23ED8B00.svg?style=for-the-badge&logo=openjdk&logoColor=white) ![R](https://img.shields.io/badge/r-%23276DC3.svg?style=for-the-badge&logo=r&logoColor=white) ![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54) ![Windows Terminal](https://img.shields.io/badge/Windows%20Terminal-%234D4D4D.svg?style=for-the-badge&logo=windows-terminal&logoColor=white) ![PowerShell](https://img.shields.io/badge/PowerShell-%235391FE.svg?style=for-the-badge&logo=powershell&logoColor=white) ![Markdown](https://img.shields.io/badge/markdown-%23000000.svg?style=for-the-badge&logo=markdown&logoColor=white) ![LaTeX](https://img.shields.io/badge/latex-%23008080.svg?style=for-the-badge&logo=latex&logoColor=white) ![Pandas](https://img.shields.io/badge/pandas-%23150458.svg?style=for-the-badge&logo=pandas&logoColor=white) ![NumPy](https://img.shields.io/badge/numpy-%23013243.svg?style=for-the-badge&logo=numpy&logoColor=white) ![Matplotlib](https://img.shields.io/badge/Matplotlib-%23ffffff.svg?style=for-the-badge&logo=Matplotlib&logoColor=black) ![Cisco](https://img.shields.io/badge/cisco-%23049fd9.svg?style=for-the-badge&logo=cisco&logoColor=black) ![Docker](https://img.shields.io/badge/docker-%230db7ed.svg?style=for-the-badge&logo=docker&logoColor=white) ![Trello](https://img.shields.io/badge/Trello-%23026AA7.svg?style=for-the-badge&logo=Trello&logoColor=white) ![Steam](https://img.shields.io/badge/steam-%23000000.svg?style=for-the-badge&logo=steam&logoColor=white) ![Raspberry Pi](https://img.shields.io/badge/-Raspberry_Pi-C51A4A?style=for-the-badge&logo=Raspberry-Pi) ![ElasticSearch](https://img.shields.io/badge/-ElasticSearch-005571?style=for-the-badge&logo=elasticsearch)
+# 📊 GitHub Stats:
+![](https://github-readme-stats.vercel.app/api?username=hannokuegler&theme=dark&hide_border=false&include_all_commits=true&count_private=true)<br/>
+![](https://nirzak-streak-stats.vercel.app/?user=hannokuegler&theme=dark&hide_border=false)<br/>
+![](https://github-readme-stats.vercel.app/api/top-langs/?username=hannokuegler&theme=dark&hide_border=false&include_all_commits=true&count_private=true&layout=compact)
+
+### ✍️ Random Dev Quote
+![](https://quotes-github-readme.vercel.app/api?type=horizontal&theme=radical)
+
+---
+[![](https://visitcount.itsvg.in/api?id=hannokuegler&icon=0&color=0)](https://visitcount.itsvg.in)
+
+<!-- Proudly created with GPRM ( https://gprm.itsvg.in ) -->
