@@ -53,7 +53,7 @@ My Latin-America trip, run like a data product. An Obsidian vault wired up with 
 An expert-level Python pipeline that fetches news from 8+ live sources (ORF, Tagesschau, BBC, NYT, …), filters by my topics (tech, finance, energy, emergency/rescue, logistics), de-duplicates headlines, pulls **live market data**, lets an **LLM write the summaries**, and emails me a crisp daily briefing — fully config-driven and secrets-safe.
 
 ### 🏋️ fitness-coach — *Garmin → AI coaching loop*
-Pulls my Garmin Connect data daily (credentials safe in the macOS keychain), builds a dashboard, and feeds it to my Claude **Coach** skill for personalized training & recovery advice.
+Pulls my Garmin Connect data daily, builds a dashboard, and feeds it to my Claude **Coach** skill for personalized training & recovery advice.
 
 ### 📄 roast_my_cv — *An LLM that roasts your CV*
 A playful but pointed LLM app (built for WU's *Applications of Data Science: LLMs* course) that reads a CV and roasts — then improves — it.
