@@ -61,11 +61,26 @@ A playful but pointed LLM app (built for WU's *Applications of Data Science: LLM
 ### ♟️ Chess-Prediction — *Predicting the unpredictable*
 Predicting chess game outcomes from Stockfish evaluations, ELO, ACPL and time features — Random Forests, Logistic Regression, PCA & calibration plots in R.
 
-### 🛰️ floodrisk — *Geospatial flood-risk modelling*
-Flood-risk modelling combining satellite & elevation data (Data Science Lab @ WU, with Infrared City).
+### 🛰️ floodrisk — *Geospatial flood-risk modelling for climate-resilient cities*
+A large, multi-month team project from WU Vienna's **Data Science Lab**, built in **real-world collaboration with [Infrared City](https://infrared.city)** — an Austrian startup making AI-powered environmental simulation tools — and supervised by **Univ.-Prof. Dr. Kavita Surana** alongside Infrared City data coaches.
 
-### 🎓 Bachelor's Thesis — *Delay Drivers in European Energy Infrastructure*
-An end-to-end **NLP & ML pipeline** over the ENTSO-E Ten-Year Network Development Plan: **967 transmission investments across 40 countries (2010–2026)**. TF-IDF + contextual **text embeddings**, t-SNE, **K-Means** (benchmarked vs. DBSCAN & GMM), with **LLM-driven (GPT, LLaMA)** interpretation of unstructured delay-driver texts — distinguishing *Delayed* (regulatory) from *Rescheduled* (technical) investments for the EU energy transition.
+The goal: replace slow, expensive fluid-dynamics flood simulations with a **scalable, data-centric ML approach** that can flag flood-prone urban areas from open data — and ship it as a flood-risk module for the company's planning platform.
+
+- 🌍 **Fused heterogeneous geospatial layers:** Copernicus/Sentinel **satellite imagery**, **digital elevation models (DEMs)**, **OpenStreetMap** vector data and **historical precipitation** records
+- 🧪 **Surface classification** (impervious surfaces vs. vegetation) and **spatial risk modelling** with Random Forests, heavy feature engineering & GIS techniques
+- 🏙️ Designed to **generalize across cities** with different geographic and demographic profiles
+- 🔁 Delivered as a **modular, reproducible end-to-end data pipeline** built to plug straight into Infrared City's AI simulation environment for climate-resilient urban planning
+
+### 🎓 Bachelor's Thesis — *Why Europe's Power Grid Runs Late*
+**"Delay Drivers in European Energy Infrastructure: An NLP & Clustering Study"** — WU Vienna, **IDEaS Institute** (Institute for Data, Energy & Sustainability), supervised by **Univ.-Prof. Dr. Kavita Surana** & **Mag. Damiano Alessi**.
+
+Europe can't hit its climate targets if the grid that carries the renewables keeps slipping. So I asked a data question to a very human problem: **why do transmission projects get delayed — and is it the same reason everywhere?** To answer it, I turned years of messy, free-text project reports into structure.
+
+- 📊 **Scope:** the full **ENTSO-E Ten-Year Network Development Plan** — **967 transmission investments across 40 countries (2010–2026)**
+- 🔤 **NLP pipeline:** preprocessing → **TF-IDF** + contextual **text embeddings** → **t-SNE** dimensionality reduction
+- 🧩 **Unsupervised clustering** with **K-Means**, rigorously benchmarked against **DBSCAN** and **Gaussian Mixture Models**
+- 🤖 **LLM-in-the-loop (GPT, LLaMA):** large language models read the unstructured delay-driver texts and turn raw clusters into human-readable narratives
+- 💡 **Key finding:** a clean, data-driven split between **Delayed** projects (stuck on *regulatory & permitting* barriers) and **Rescheduled** ones (*technical & renewables-integration* challenges) — a distinction with direct **policy implications for the EU energy transition**
 
 *…plus a long tail of smaller experiments: face recognition, a smart alarm clock, a Morse-code encoder ("Mössi Morser") with wireless transmission, and more.*
 
@@ -103,19 +118,6 @@ An end-to-end **NLP & ML pipeline** over the ENTSO-E Ten-Year Network Developmen
 ![Obsidian](https://img.shields.io/badge/Obsidian-%23483699.svg?style=for-the-badge&logo=obsidian&logoColor=white)
 ![Raspberry Pi](https://img.shields.io/badge/-Raspberry_Pi-C51A4A?style=for-the-badge&logo=Raspberry-Pi)
 ![Linux](https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black)
-
----
-
-## 📊 GitHub Stats
-
-<p align="center">
-  <img height="165" src="https://github-readme-stats.vercel.app/api?username=hannokuegler&show_icons=true&theme=radical&include_all_commits=true&count_private=true" alt="stats" />
-  <img height="165" src="https://github-readme-stats.vercel.app/api/top-langs/?username=hannokuegler&layout=compact&theme=radical&langs_count=8" alt="top langs" />
-</p>
-
-<p align="center">
-  <img src="https://github-readme-streak-stats.herokuapp.com/?user=hannokuegler&theme=radical" alt="streak" />
-</p>
 
 ---
 
