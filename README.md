@@ -40,10 +40,7 @@ The centerpiece is a **personal AI assistant ecosystem I built on top of Claude*
 | 🏋️ **Coach** | A fitness & recovery coach that reads my **Garmin** data, knows my athlete profile, and gives data-driven, no-BS training/sleep/recovery calls |
 | 🛋️ **Freud** | A dream interpreter running psychoanalytic sessions via free association, building a personal symbol lexicon & dream profile over time |
 | 🗣️ **Sokrates** | A daily debate & argumentation sparring partner with scorecards, drills and a fact-check loop |
-| 📋 **Anita / CFO / Simon** | A project manager, a brutally honest CFO, and an entrepreneur sparring partner for ideas, finances & strategy |
-| 🗂️ **Session** | Captures and recalls the important parts of every work session — decisions, fixes, open questions |
-
-> All of this is glued together in a single Obsidian "second brain" vault that the agents read from and write back into. It's basically a personal operating system powered by LLMs.
+| 💼 **Business sparring** | A project manager, a brutally honest CFO and an entrepreneur sparring partner for ideas, finances & strategy |
 
 ---
 
