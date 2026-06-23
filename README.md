@@ -52,9 +52,6 @@ My Latin-America trip, run like a data product. An Obsidian vault wired up with 
 ### 📰 dailybot — *Personalized daily digest engine*
 An expert-level Python pipeline that fetches news from 8+ live sources (ORF, Tagesschau, BBC, NYT, …), filters by my topics (tech, finance, energy, emergency/rescue, logistics), de-duplicates headlines, pulls **live market data**, lets an **LLM write the summaries**, and emails me a crisp daily briefing — fully config-driven and secrets-safe.
 
-### 🗞️ newscat — *Finance-news ingestion & clustering*
-A clean news-intelligence pipeline that ingests finance headlines into a local SQLite store and surfaces "what's actually going on" via clustering — with a simple CLI ticker view.
-
 ### 🏋️ fitness-coach — *Garmin → AI coaching loop*
 Pulls my Garmin Connect data daily (credentials safe in the macOS keychain), builds a dashboard, and feeds it to my Claude **Coach** skill for personalized training & recovery advice.
 
