@@ -20,7 +20,7 @@ I'm a **business & data science graduate of WU Vienna** who fell hard for AI —
 
 - 🎓 **BSc Business, Economics & Social Sciences @ WU Vienna** — *graduated Feb 2026*
 - 🏆 **Top 1% of my cohort:** #13 of 3,067 in the Academic Progress Ranking · **Rector's List (WS 2025)**
-- 📈 **GPA 1.84** · **192 ECTS in 5 semesters** (12 above curriculum, finished a semester early)
+- 📈 **204 ECTS in 5 semesters** — finished a semester early
 - 🧠 Triple specialization: **Data Science**, **Responsible Management of Information Systems** & **Production Management** *(final grade: Sehr Gut)*
 - 🚀 Next up: **Dipl.-Ing. (TU) + MSc (WU)** — going deeper into AI, data & systems
 - 🚑 4 years of **emergency leadership** at the Austrian Red Cross
