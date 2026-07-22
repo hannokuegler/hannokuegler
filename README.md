@@ -44,7 +44,43 @@ The centerpiece is a **personal AI assistant ecosystem I built on top of Claude*
 
 ---
 
-## 🛠️ Featured Projects
+## 📦 Open Source
+
+Three tools I pulled out of that private stack, rebuilt from scratch and released. Same three rules for all of them: **local-first** (your data never leaves your machine), **one `pip install`**, and a **zero-config `demo` command** — you see the thing working in ten seconds, no account, no login, no signup.
+
+| Tool | One line | Stack |
+|---|---|---|
+| ⌚ **[garmindeck](https://github.com/hannokuegler/garmindeck)** | Your Garmin data in a beautiful local dashboard — no cloud, no subscription | Python · FastAPI · SQLite |
+| 🗣️ **[blurt](https://github.com/hannokuegler/blurt)** | A voice memo goes in, structured data comes out in three different systems | Python · Whisper · Ollama |
+| 📬 **[mailctx](https://github.com/hannokuegler/mailctx)** | Any IMAP inbox as clean, token-cheap Markdown — with an MCP server for Claude | Python · IMAP · MCP |
+
+### ⌚ garmindeck — *your watch data, without the subscription*
+
+You already paid for the watch — then Garmin sold you *Connect+* on top of it. `garmindeck` syncs everything your device ever recorded into a plain **SQLite file on your own disk** and serves it as a fast, interactive dashboard on `localhost`. Steps, sleep phases, resting HR, overnight **HRV**, body battery vs. stress, training load — plus the numbers Garmin buries fifteen taps deep: **race predictions (5K → marathon), training readiness and VO₂max**. Works fully **offline, forever**, even if your account disappears. macOS · Windows · Linux, incremental & resumable sync, MFA supported, `export` to CSV. It's also the data layer my Claude **Coach** agent reads from.
+
+```bash
+pip install garmindeck && garmindeck demo   # synthetic data, no login needed
+```
+
+### 🗣️ blurt — *voice memos that route themselves*
+
+There are a hundred Whisper wrappers; none of them are a **daemon**. `blurt` watches a folder, transcribes locally, and — the actual point — splits **one rambling memo into multiple intents** and routes each to a **different destination**: the TODO gets appended to your task file, the journal bit written to today's note, the idea POSTed to a webhook. All declarative in `routing.yaml`, zero clicks, and with an **enforced paranoid mode** that makes "provably offline" a guarantee rather than a promise. Speak into your watch on a hike, find structured tickets in your repo when you're back.
+
+```bash
+pip install blurt && blurt demo
+```
+
+### 📬 mailctx — *the missing IMAP MCP server*
+
+LLMs drown in `<style>` tags, nested quotes and tracking pixels. `mailctx` is a provider-agnostic IMAP engine that strips all of it and emits bounded, token-optimized **Markdown** — **59–98% fewer tokens** on the bundled corpus. Ships an **MCP server**, so Claude Desktop can answer *"what did I miss this week?"* or *"draft a reply to my landlord"* against any mailbox. Hardened for real life: typed transient-vs-auth error handling with retry (born from Gmail EOF drops on travel WLAN), multi-account isolation. And a hard safety boundary — **it can read and draft, it can never send or delete.** For an agent touching your inbox, that constraint *is* the feature.
+
+```bash
+pip install "mailctx[mcp]" && mailctx demo
+```
+
+---
+
+## 🛠️ More Projects & Research
 
 ### 🌎 Gringo Trail — *Automated travel & journaling system*
 My Latin-America trip, run like a data product. An Obsidian vault wired up with **custom Claude commands** that turn rough notes into structured travel journals, track the route, and keep everything searchable — automated documentation of a whole continent of travel.
@@ -53,7 +89,7 @@ My Latin-America trip, run like a data product. An Obsidian vault wired up with 
 An expert-level Python pipeline that fetches news from 8+ live sources (ORF, Tagesschau, BBC, NYT, …), filters by my topics (tech, finance, energy, emergency/rescue, logistics), de-duplicates headlines, pulls **live market data**, lets an **LLM write the summaries**, and emails me a crisp daily briefing — fully config-driven and secrets-safe.
 
 ### 🏋️ fitness-coach — *Garmin → AI coaching loop*
-Pulls my Garmin Connect data daily, builds a dashboard, and feeds it to my Claude **Coach** skill for personalized training & recovery advice.
+The private predecessor of [garmindeck](https://github.com/hannokuegler/garmindeck): pulls my Garmin Connect data daily, keeps a strength-training database, and feeds both to my Claude **Coach** agent for personalized training & recovery calls.
 
 ### 📄 roast_my_cv — *An LLM that roasts your CV*
 A playful but pointed LLM app (built for WU's *Applications of Data Science: LLMs* course) that reads a CV and roasts — then improves — it.
@@ -89,6 +125,7 @@ Europe can't hit its climate targets if the grid that carries the renewables kee
 ## 🌱 Currently
 
 - 🔭 Going deeper into **LLMs, agents & AI-driven analytics**
+- 📦 Shipping **local-first open source** — [garmindeck](https://github.com/hannokuegler/garmindeck), [blurt](https://github.com/hannokuegler/blurt) & [mailctx](https://github.com/hannokuegler/mailctx) (issues and stars very welcome ⭐)
 - 🧩 Building & refining my personal Claude agent ecosystem
 - 🇪🇸 Learning **Spanish** while traveling **Latin America**
 - 🤝 Open to collaborating on **AI/LLM, data science, energy & sustainability** projects
@@ -111,6 +148,9 @@ Europe can't hit its climate targets if the grid that carries the renewables kee
 ![NumPy](https://img.shields.io/badge/numpy-%23013243.svg?style=for-the-badge&logo=numpy&logoColor=white)
 ![scikit-learn](https://img.shields.io/badge/scikit--learn-%23F7931E.svg?style=for-the-badge&logo=scikit-learn&logoColor=white)
 ![Matplotlib](https://img.shields.io/badge/Matplotlib-%23ffffff.svg?style=for-the-badge&logo=Matplotlib&logoColor=black)
+![FastAPI](https://img.shields.io/badge/FastAPI-005571?style=for-the-badge&logo=fastapi&logoColor=white)
+![MCP](https://img.shields.io/badge/MCP-000000?style=for-the-badge&logo=modelcontextprotocol&logoColor=white)
+![Ollama](https://img.shields.io/badge/Ollama-000000?style=for-the-badge&logo=ollama&logoColor=white)
 
 ![Git](https://img.shields.io/badge/git-%23F05033.svg?style=for-the-badge&logo=git&logoColor=white)
 ![Docker](https://img.shields.io/badge/docker-%230db7ed.svg?style=for-the-badge&logo=docker&logoColor=white)
