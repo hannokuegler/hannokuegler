@@ -22,8 +22,7 @@ I'm a **business & data science graduate of WU Vienna** who fell hard for AI —
 - 🏆 **Top 1% of my cohort:** #10 of 3,067 in the Academic Progress Ranking · **Rector's List (WS 2025/26)** · merit scholarship
 - 📈 **202 ECTS in 5 semesters** — finished a semester early
 - 🧠 Triple specialization: **Data Science**, **Responsible Management of Information Systems** & **Production Management** *(final grade: Sehr Gut)*
-- 📝 **Sole author** of a topical review on *digital innovation & public acceptance of nuclear energy* — under review at an **IOP journal**
-- 🚑 **Paramedic & emergency driver** at the Austrian Red Cross since 2022 · certified **first-aid instructor**
+- 🚑 **Paramedic & emergency driver** at the Austrian Red Cross since 2022
 - 🌎 Spent **211 days backpacking Latin America** (Brazil → USA) and came back speaking **Spanish** 🇪🇸
 
 ---
