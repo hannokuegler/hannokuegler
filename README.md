@@ -9,7 +9,6 @@
   <a href="https://linkedin.com/in/hannokuegler"><img src="https://img.shields.io/badge/LinkedIn-%230077B5.svg?logo=linkedin&logoColor=white" alt="LinkedIn"></a>
   <a href="https://instagram.com/hannokuegler"><img src="https://img.shields.io/badge/Instagram-%23E4405F.svg?logo=Instagram&logoColor=white" alt="Instagram"></a>
   <a href="mailto:hanno.kuegler@gmail.com"><img src="https://img.shields.io/badge/Email-D14836?logo=gmail&logoColor=white" alt="Email"></a>
-  <img src="https://komarev.com/ghpvc/?username=hannokuegler&label=Profile%20views&color=0e75b6&style=flat" alt="views">
 </p>
 
 ---
@@ -29,22 +28,20 @@ I'm a **business & data science graduate of WU Vienna** who fell hard for AI —
 
 ---
 
-## 🤖 My Thing: Building with LLMs
+## 🤖 What I Build: LLM Systems That Run in Production
 
-I'm genuinely obsessed with large language models — not just using them, but **building real, personal systems around them**. Most of my AI work isn't a demo that dies after a weekend; it's stuff I use in my own life, daily.
+Most LLM projects are demos that die after a weekend. Mine run every day — on my own hardware, against my own data, with the boring parts (scheduling, monitoring, backups, reviews) taken seriously.
 
-The centerpiece is **Landa — a personal AI operating system I built on top of Claude**. One orchestrator agent acts as *CEO*: it breaks ideas into work orders and dispatches them to role agents (**CTO** writes code test-first, **COO** runs the self-hosted NixOS server & pipelines, **chief of staff** handles mail, calendar & tasks) — and a separate **blind reviewer** has to sign off before anything counts as done. Around it: a morning report and a weekly review that land in my inbox, a web cockpit for my whole life, and a mail assistant I can simply write to from my phone.
+### 🏗️ Landa — a self-hosted, agent-driven automation platform
+A private system of ~20 scheduled pipelines around a Markdown knowledge base, running on a **self-hosted NixOS server**.
 
-Plus a set of specialized agents, each with its own memory, data and personality:
-
-| Agent | What it does |
-|-------|--------------|
-| 🇪🇸 **Marco** | My Spanish tutor & vocab trainer — runs drills, dialogues and spaced-repetition vocab tests (Leitner system), tracks weak spots and progress |
-| 🇺🇸 **Miles** | An English speaking coach — transcribes my speaking videos locally, measures pace, filler words & vocabulary, and fixes collocations and German interference |
-| 🏋️ **Coach** | A strength, running & recovery coach that reads my **Garmin** data and my lifting database, plans the week into my calendar and gives data-driven, no-BS calls |
-| 🛋️ **Freud** | A dream interpreter running psychoanalytic sessions via free association, building a personal symbol lexicon & dream profile over time |
-| 🗣️ **Sokrates** | A daily debate & argumentation sparring partner with scorecards, drills and a fact-check loop |
-| 💼 **Business sparring** | A project manager, a brutally honest CFO and an entrepreneur sparring partner for ideas, finances & strategy |
+- ⚙️ **Architecture:** `systemd` timers → shell runners → headless **Claude Code** (`claude -p`) with custom skills → typed Python scripts. Every LLM step has a deterministic script underneath it; the model decides, the code executes.
+- 🧑‍💼 **Multi-agent org:** an orchestrator splits work into written work orders for role agents (engineering, operations, admin). A separate **blind reviewer** only sees the original order and the test commands — never the builder's report — and has to verify the result before it is accepted.
+- 🔀 **Real dev workflow:** every code change goes branch → tests → pull request → review → merge → server deploy.
+- 📊 **Data layer:** Garmin sync every 30 min into SQLite, iCloud **CalDAV** calendar sync, IMAP mail ingestion, local **Whisper** transcription of voice memos.
+- 📬 **Mail assistant:** I email a question from my phone, an agent searches the knowledge base, mail and training data and replies with sources — running on an **open-weight model**, so it's cheap enough to poll every 2 minutes.
+- 🛡️ **Ops:** nightly **restic** backups, a network watchdog that heals itself in stages (reconnect → USB reset → reboot), and an automated check of every public hostname against certificate-transparency logs (`crt.sh`).
+- 🖥️ **Landa Web:** a self-hosted dashboard on top of all of it — tasks, calendar, training, study progress and system health in one place.
 
 ---
 
@@ -84,32 +81,7 @@ pip install "mailctx[mcp] @ git+https://github.com/hannokuegler/mailctx" && mail
 
 ---
 
-## 🛠️ More Projects & Research
-
-### 🌎 Gringo Trail — *Automated travel & journaling system*
-My 211-day Latin-America trip, run like a data product. An Obsidian vault wired up with **custom Claude commands** that turned rough notes and voice memos into structured travel journals, tracked the route across 13 countries, and kept everything searchable — a whole continent of travel, documented on autopilot.
-
-### 📰 dailybot — *Personalized daily digest engine*
-An expert-level Python pipeline that fetches news from 8+ live sources (ORF, Tagesschau, BBC, NYT, …), filters by my topics (tech, finance, energy, emergency/rescue, logistics), de-duplicates headlines, pulls **live market data**, lets an **LLM write the summaries**, and emails me a crisp daily briefing — fully config-driven and secrets-safe.
-
-### 🏋️ fitness-coach — *Garmin → AI coaching loop*
-The private predecessor of [garmindeck](https://github.com/hannokuegler/garmindeck): pulls my Garmin Connect data daily, keeps a strength-training database, and feeds both to my Claude **Coach** agent for personalized training & recovery calls.
-
-### 📄 roast_my_cv — *An LLM that roasts your CV*
-A playful but pointed LLM app (built for WU's *Applications of Data Science: LLMs* course) that reads a CV and roasts — then improves — it.
-
-### ♟️ Chess-Prediction — *Predicting the unpredictable*
-Predicting chess game outcomes from Stockfish evaluations, ELO, ACPL and time features — Random Forests, Logistic Regression, PCA & calibration plots in R.
-
-### 🛰️ floodrisk — *Geospatial flood-risk modelling for climate-resilient cities*
-A large, multi-month team project from WU Vienna's **Data Science Lab**, built in **real-world collaboration with [Infrared City](https://infrared.city)** — an Austrian startup making AI-powered environmental simulation tools — and supervised by **Univ.-Prof. Dr. Kavita Surana** alongside Infrared City data coaches.
-
-The goal: replace slow, expensive fluid-dynamics flood simulations with a **scalable, data-centric ML approach** that can flag flood-prone urban areas from open data — and ship it as a flood-risk module for the company's planning platform.
-
-- 🌍 **Fused heterogeneous geospatial layers:** Copernicus/Sentinel **satellite imagery**, **digital elevation models (DEMs)**, **OpenStreetMap** vector data and **historical precipitation** records
-- 🧪 **Surface classification** (impervious surfaces vs. vegetation) and **spatial risk modelling** with Random Forests, heavy feature engineering & GIS techniques
-- 🏙️ Designed to **generalize across cities** with different geographic and demographic profiles
-- 🔁 Delivered as a **modular, reproducible end-to-end data pipeline** built to plug straight into Infrared City's AI simulation environment for climate-resilient urban planning
+## 🛠️ Research & Projects
 
 ### 🎓 Bachelor's Thesis — *Why Europe's Power Grid Runs Late*
 **"Delay Drivers in European Energy Infrastructure: An NLP & Clustering Study"** — WU Vienna, **IDEaS Institute** (Institute for Data, Energy & Sustainability), supervised by **Univ.-Prof. Dr. Kavita Surana** & **Mag. Damiano Alessi**.
@@ -122,6 +94,28 @@ Europe can't hit its climate targets if the grid that carries the renewables kee
 - 🤖 **LLM-in-the-loop (GPT, LLaMA):** large language models read the unstructured delay-driver texts and turn raw clusters into human-readable narratives
 - 💡 **Key finding:** a clean, data-driven split between **Delayed** projects (stuck on *regulatory & permitting* barriers) and **Rescheduled** ones (*technical & renewables-integration* challenges) — a distinction with direct **policy implications for the EU energy transition**
 
+### 🛰️ floodrisk — *Geospatial flood-risk modelling for climate-resilient cities*
+A large, multi-month team project from WU Vienna's **Data Science Lab**, built in **real-world collaboration with [Infrared City](https://infrared.city)** — an Austrian startup making AI-powered environmental simulation tools — and supervised by **Univ.-Prof. Dr. Kavita Surana** alongside Infrared City data coaches.
+
+The goal: replace slow, expensive fluid-dynamics flood simulations with a **scalable, data-centric ML approach** that can flag flood-prone urban areas from open data — and ship it as a flood-risk module for the company's planning platform.
+
+- 🌍 **Fused heterogeneous geospatial layers:** Copernicus/Sentinel **satellite imagery**, **digital elevation models (DEMs)**, **OpenStreetMap** vector data and **historical precipitation** records
+- 🧪 **Surface classification** (impervious surfaces vs. vegetation) and **spatial risk modelling** with Random Forests, heavy feature engineering & GIS techniques
+- 🏙️ Designed to **generalize across cities** with different geographic and demographic profiles
+- 🔁 Delivered as a **modular, reproducible end-to-end data pipeline** built to plug straight into Infrared City's AI simulation environment for climate-resilient urban planning
+
+### ♟️ Chess-Prediction — *Predicting the unpredictable*
+Predicting chess game outcomes from Stockfish evaluations, ELO, ACPL and time features — Random Forests, Logistic Regression, PCA & calibration plots in R.
+
+### 📰 dailybot — *Personalized daily digest engine*
+An expert-level Python pipeline that fetches news from 8+ live sources (ORF, Tagesschau, BBC, NYT, …), filters by my topics (tech, finance, energy, emergency/rescue, logistics), de-duplicates headlines, pulls **live market data**, lets an **LLM write the summaries**, and emails me a crisp daily briefing — fully config-driven and secrets-safe.
+
+### 🌎 Gringo Trail — *Automated travel & journaling system*
+My 211-day Latin-America trip, run like a data product. An Obsidian vault wired up with **custom Claude commands** that turned rough notes and voice memos into structured travel journals, tracked the route across 13 countries, and kept everything searchable — a whole continent of travel, documented on autopilot.
+
+### 📄 roast_my_cv — *An LLM that roasts your CV*
+A playful but pointed LLM app (built for WU's *Applications of Data Science: LLMs* course) that reads a CV and roasts — then improves — it.
+
 *…plus a long tail of smaller experiments: face recognition, a smart alarm clock, a Morse-code encoder ("Mössi Morser") with wireless transmission, and more.*
 
 ---
@@ -131,7 +125,7 @@ Europe can't hit its climate targets if the grid that carries the renewables kee
 - 🎓 Kicking off the **WU + TU double master's** in Vienna
 - 🔭 Going deeper into **LLMs, agents & AI-driven analytics**
 - 📦 Shipping **local-first open source** — [garmindeck](https://github.com/hannokuegler/garmindeck), [blurt](https://github.com/hannokuegler/blurt) & [mailctx](https://github.com/hannokuegler/mailctx) (issues and stars very welcome ⭐)
-- 🧩 Running my personal agent org on a self-hosted **NixOS** box
+- 🧩 Hardening Landa: more tests, better observability, cheaper models where they're good enough
 - 🤝 Open to collaborating on **AI/LLM, data science, energy & sustainability** projects
 
 ---
@@ -166,9 +160,5 @@ Europe can't hit its climate targets if the grid that carries the renewables kee
 
 ---
 
-### ✍️ Random Dev Quote
-![](https://quotes-github-readme.vercel.app/api?type=horizontal&theme=radical)
-
----
 
 > ⚡ **Fun fact:** I grew up on a farm raising chickens 🐔 — now I raise models & datasets. At 195 cm I run and powerlift, and remain statistically unlikely to fit into airplane legroom (a real problem for 211 days on the Gringo Trail).
