@@ -1,7 +1,7 @@
 <h1 align="center">Hi, I'm Hanno 👋</h1>
 
 <p align="center">
-  <b>Data Scientist &amp; AI / LLM Builder</b> · Vienna 🇦🇹 → currently roaming Latin America 🌎<br>
+  <b>Data Scientist &amp; AI / LLM Builder</b> · Vienna 🇦🇹 · back from 7 months on the road in Latin America 🌎<br>
   <i>Turning messy data and large language models into things that actually do something.</i>
 </p>
 
@@ -18,13 +18,14 @@
 
 I'm a **business & data science graduate of WU Vienna** who fell hard for AI — and now builds with it every single day. I love taking a vague idea, a pile of unstructured data, and a good LLM, and turning the three into a working system.
 
+- 🚀 **Starting Oct 2026: a double master's** — **MSc Digital Economy @ WU Vienna** + **Dipl.-Ing. Business Informatics @ TU Wien**
 - 🎓 **BSc Business, Economics & Social Sciences @ WU Vienna** — *graduated Feb 2026*
-- 🏆 **Top 1% of my cohort:** #13 of 3,067 in the Academic Progress Ranking · **Rector's List (WS 2025)**
-- 📈 **204 ECTS in 5 semesters** — finished a semester early
+- 🏆 **Top 1% of my cohort:** #10 of 3,067 in the Academic Progress Ranking · **Rector's List (WS 2025/26)** · merit scholarship
+- 📈 **202 ECTS in 5 semesters** — finished a semester early
 - 🧠 Triple specialization: **Data Science**, **Responsible Management of Information Systems** & **Production Management** *(final grade: Sehr Gut)*
-- 🚀 Next up: **Dipl.-Ing. (TU) + MSc (WU)** — going deeper into AI, data & systems
-- 🚑 4 years of **emergency leadership** at the Austrian Red Cross
-- 🌎 Currently traveling **Latin America** and learning **Spanish** 🇪🇸 (voseo, Colombia-style)
+- 📝 **Sole author** of a topical review on *digital innovation & public acceptance of nuclear energy* — under review at an **IOP journal**
+- 🚑 **Paramedic & emergency driver** at the Austrian Red Cross since 2022 · certified **first-aid instructor**
+- 🌎 Spent **211 days backpacking Latin America** (Brazil → USA) and came back speaking **Spanish** 🇪🇸
 
 ---
 
@@ -32,12 +33,15 @@ I'm a **business & data science graduate of WU Vienna** who fell hard for AI —
 
 I'm genuinely obsessed with large language models — not just using them, but **building real, personal systems around them**. Most of my AI work isn't a demo that dies after a weekend; it's stuff I use in my own life, daily.
 
-The centerpiece is a **personal AI assistant ecosystem I built on top of Claude** — a set of specialized agents/skills, each with its own memory, data and personality, that automate and supercharge different parts of my life:
+The centerpiece is **Landa — a personal AI operating system I built on top of Claude**. One orchestrator agent acts as *CEO*: it breaks ideas into work orders and dispatches them to role agents (**CTO** writes code test-first, **COO** runs the self-hosted NixOS server & pipelines, **chief of staff** handles mail, calendar & tasks) — and a separate **blind reviewer** has to sign off before anything counts as done. Around it: a morning report and a weekly review that land in my inbox, a web cockpit for my whole life, and a mail assistant I can simply write to from my phone.
+
+Plus a set of specialized agents, each with its own memory, data and personality:
 
 | Agent | What it does |
 |-------|--------------|
 | 🇪🇸 **Marco** | My Spanish tutor & vocab trainer — runs drills, dialogues and spaced-repetition vocab tests (Leitner system), tracks weak spots and progress |
-| 🏋️ **Coach** | A fitness & recovery coach that reads my **Garmin** data, knows my athlete profile, and gives data-driven, no-BS training/sleep/recovery calls |
+| 🇺🇸 **Miles** | An English speaking coach — transcribes my speaking videos locally, measures pace, filler words & vocabulary, and fixes collocations and German interference |
+| 🏋️ **Coach** | A strength, running & recovery coach that reads my **Garmin** data and my lifting database, plans the week into my calendar and gives data-driven, no-BS calls |
 | 🛋️ **Freud** | A dream interpreter running psychoanalytic sessions via free association, building a personal symbol lexicon & dream profile over time |
 | 🗣️ **Sokrates** | A daily debate & argumentation sparring partner with scorecards, drills and a fact-check loop |
 | 💼 **Business sparring** | A project manager, a brutally honest CFO and an entrepreneur sparring partner for ideas, finances & strategy |
@@ -46,7 +50,7 @@ The centerpiece is a **personal AI assistant ecosystem I built on top of Claude*
 
 ## 📦 Open Source
 
-Three tools I pulled out of that private stack, rebuilt from scratch and released. Same three rules for all of them: **local-first** (your data never leaves your machine), **one `pip install`**, and a **zero-config `demo` command** — you see the thing working in ten seconds, no account, no login, no signup.
+Three tools I pulled out of that private stack, rebuilt from scratch and released. Same three rules for all of them: **local-first** (your data never leaves your machine), **one `pip install`** straight from GitHub, and a **zero-config `demo` command** — you see the thing working in ten seconds, no account, no login, no signup.
 
 | Tool | One line | Stack |
 |---|---|---|
@@ -59,7 +63,7 @@ Three tools I pulled out of that private stack, rebuilt from scratch and release
 You already paid for the watch — then Garmin sold you *Connect+* on top of it. `garmindeck` syncs everything your device ever recorded into a plain **SQLite file on your own disk** and serves it as a fast, interactive dashboard on `localhost`. Steps, sleep phases, resting HR, overnight **HRV**, body battery vs. stress, training load — plus the numbers Garmin buries fifteen taps deep: **race predictions (5K → marathon), training readiness and VO₂max**. Works fully **offline, forever**, even if your account disappears. macOS · Windows · Linux, incremental & resumable sync, MFA supported, `export` to CSV. It's also the data layer my Claude **Coach** agent reads from.
 
 ```bash
-pip install garmindeck && garmindeck demo   # synthetic data, no login needed
+pip install git+https://github.com/hannokuegler/garmindeck && garmindeck demo   # synthetic data, no login needed
 ```
 
 ### 🗣️ blurt — *voice memos that route themselves*
@@ -67,7 +71,7 @@ pip install garmindeck && garmindeck demo   # synthetic data, no login needed
 There are a hundred Whisper wrappers; none of them are a **daemon**. `blurt` watches a folder, transcribes locally, and — the actual point — splits **one rambling memo into multiple intents** and routes each to a **different destination**: the TODO gets appended to your task file, the journal bit written to today's note, the idea POSTed to a webhook. All declarative in `routing.yaml`, zero clicks, and with an **enforced paranoid mode** that makes "provably offline" a guarantee rather than a promise. Speak into your watch on a hike, find structured tickets in your repo when you're back.
 
 ```bash
-pip install blurt && blurt demo
+pip install git+https://github.com/hannokuegler/blurt && blurt demo
 ```
 
 ### 📬 mailctx — *the missing IMAP MCP server*
@@ -75,7 +79,7 @@ pip install blurt && blurt demo
 LLMs drown in `<style>` tags, nested quotes and tracking pixels. `mailctx` is a provider-agnostic IMAP engine that strips all of it and emits bounded, token-optimized **Markdown** — **59–98% fewer tokens** on the bundled corpus. Ships an **MCP server**, so Claude Desktop can answer *"what did I miss this week?"* or *"draft a reply to my landlord"* against any mailbox. Hardened for real life: typed transient-vs-auth error handling with retry (born from Gmail EOF drops on travel WLAN), multi-account isolation. And a hard safety boundary — **it can read and draft, it can never send or delete.** For an agent touching your inbox, that constraint *is* the feature.
 
 ```bash
-pip install "mailctx[mcp]" && mailctx demo
+pip install "mailctx[mcp] @ git+https://github.com/hannokuegler/mailctx" && mailctx demo
 ```
 
 ---
@@ -83,7 +87,7 @@ pip install "mailctx[mcp]" && mailctx demo
 ## 🛠️ More Projects & Research
 
 ### 🌎 Gringo Trail — *Automated travel & journaling system*
-My Latin-America trip, run like a data product. An Obsidian vault wired up with **custom Claude commands** that turn rough notes into structured travel journals, track the route, and keep everything searchable — automated documentation of a whole continent of travel.
+My 211-day Latin-America trip, run like a data product. An Obsidian vault wired up with **custom Claude commands** that turned rough notes and voice memos into structured travel journals, tracked the route across 13 countries, and kept everything searchable — a whole continent of travel, documented on autopilot.
 
 ### 📰 dailybot — *Personalized daily digest engine*
 An expert-level Python pipeline that fetches news from 8+ live sources (ORF, Tagesschau, BBC, NYT, …), filters by my topics (tech, finance, energy, emergency/rescue, logistics), de-duplicates headlines, pulls **live market data**, lets an **LLM write the summaries**, and emails me a crisp daily briefing — fully config-driven and secrets-safe.
@@ -124,10 +128,10 @@ Europe can't hit its climate targets if the grid that carries the renewables kee
 
 ## 🌱 Currently
 
+- 🎓 Kicking off the **WU + TU double master's** in Vienna
 - 🔭 Going deeper into **LLMs, agents & AI-driven analytics**
 - 📦 Shipping **local-first open source** — [garmindeck](https://github.com/hannokuegler/garmindeck), [blurt](https://github.com/hannokuegler/blurt) & [mailctx](https://github.com/hannokuegler/mailctx) (issues and stars very welcome ⭐)
-- 🧩 Building & refining my personal Claude agent ecosystem
-- 🇪🇸 Learning **Spanish** while traveling **Latin America**
+- 🧩 Running my personal agent org on a self-hosted **NixOS** box
 - 🤝 Open to collaborating on **AI/LLM, data science, energy & sustainability** projects
 
 ---
@@ -158,6 +162,7 @@ Europe can't hit its climate targets if the grid that carries the renewables kee
 ![Obsidian](https://img.shields.io/badge/Obsidian-%23483699.svg?style=for-the-badge&logo=obsidian&logoColor=white)
 ![Raspberry Pi](https://img.shields.io/badge/-Raspberry_Pi-C51A4A?style=for-the-badge&logo=Raspberry-Pi)
 ![Linux](https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black)
+![NixOS](https://img.shields.io/badge/NixOS-5277C3?style=for-the-badge&logo=nixos&logoColor=white)
 
 ---
 
@@ -166,4 +171,4 @@ Europe can't hit its climate targets if the grid that carries the renewables kee
 
 ---
 
-> ⚡ **Fun fact:** I grew up on a farm raising chickens 🐔 — now I raise models & datasets. At 195 cm I run and powerlift, and remain statistically unlikely to fit into airplane legroom (a real problem on the Gringo Trail).
+> ⚡ **Fun fact:** I grew up on a farm raising chickens 🐔 — now I raise models & datasets. At 195 cm I run and powerlift, and remain statistically unlikely to fit into airplane legroom (a real problem for 211 days on the Gringo Trail).
