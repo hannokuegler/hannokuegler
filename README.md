@@ -17,13 +17,38 @@
 
 I'm a **business & data science graduate of WU Vienna** who fell hard for AI — and now builds with it every single day. I love taking a vague idea, a pile of unstructured data, and a good LLM, and turning the three into a working system.
 
-- 🚀 **Starting Oct 2026: a double master's** — **MSc Digital Economy @ WU Vienna** + **Dipl.-Ing. Business Informatics @ TU Wien**
+- 🚀 **Double master's since Oct 2026** — **MSc Digital Economy @ WU Vienna** + **Dipl.-Ing. Business Informatics @ TU Wien**
+- 🏁 **Hackathons:** Hack-Nation 7th Global AI Hackathon 2026 (Vienna Hub) with [Constellate](https://github.com/hannokuegler/constellate) · next up: **WU hackathon on Oct 24**
 - 🎓 **BSc Business, Economics & Social Sciences @ WU Vienna** — *graduated Feb 2026*
 - 🏆 **Top 1% of my cohort:** #10 of 3,067 in the Academic Progress Ranking · **Rector's List (WS 2025/26)** · merit scholarship
 - 📈 **202 ECTS in 5 semesters** — finished a semester early
 - 🧠 Triple specialization: **Data Science**, **Responsible Management of Information Systems** & **Production Management** *(final grade: Sehr Gut)*
 - 🚑 **Paramedic & emergency driver** at the Austrian Red Cross since 2022
 - 🌎 Spent **211 days backpacking Latin America** (Brazil → USA) and came back speaking **Spanish** 🇪🇸
+
+---
+
+## 🆕 Latest
+
+### 🧬 [Constellate](https://github.com/hannokuegler/constellate) — *fast help and information for people with rare diseases*
+**Built in 24 hours at the Hack-Nation 7th Global AI Hackathon** (Challenge 05 *"AI Atlas for the World's Rare Diseases"*, Buffalo Initiative × OpenAI, Vienna Hub) — with my teammates [@Reczec](https://github.com/Reczec) and Osman.
+
+A family gets a rare diagnosis with no approved treatment — and within weeks has to become its own research team. Constellate gets them **fast, sourced answers**: which community shares the same mechanism, which open studies and registries already exist, and what they can send to researchers this week.
+
+- 🕸️ An **evidence-graded knowledge graph** that organizes rare diseases by **mechanism and phenotype instead of name** — HPO, MONDO, Orphanet, ClinVar, ClinicalTrials.gov, Europe PMC, NIH RePORTER, Open Targets, Reactome
+- 🔎 Every edge carries its **source, date, evidence level and counter-evidence** — nothing comes from model memory
+- 🃏 **Action Cards:** what transfers from a related disease, what differs, what needs expert review — every sentence cites an edge
+- 🕳️ **Honest Gap:** when there is no supported lead, it says so and shows what was searched instead of making something up
+- ⚙️ Offline Python pipeline → static JSON → Next.js on Vercel; OpenAI at exactly three points (Extract, Reconcile, Explain)
+
+**▶️ Live demo:** [constellate-vert.vercel.app](https://constellate-vert.vercel.app) — no login
+
+### 🔐 [TU VPN](https://github.com/hannokuegler/tu_vpn) — *one click into the TU Wien network*
+An unofficial macOS menu-bar app for the TU Wien VPN, built in my first week at TU — because nobody wants the Cisco client. One click to connect, **MFA once per ~5-day session**, two profiles (TU-only or full tunnel for library papers), credentials in the **macOS Keychain**, survives sleep and Wi-Fi changes, German & English. Swift/AppKit on top of [openconnect](https://www.infradead.org/openconnect/), universal binary, CI + checksum-verified one-line installer.
+
+```bash
+curl -fsSL https://raw.githubusercontent.com/hannokuegler/tu_vpn/main/install.sh | bash
+```
 
 ---
 
@@ -121,11 +146,12 @@ A playful but pointed LLM app (built for WU's *Applications of Data Science: LLM
 
 ## 🌱 Currently
 
-- 🎓 Kicking off the **WU + TU double master's** in Vienna
+- 🎓 First semester of the **WU + TU double master's** in Vienna
+- 🏁 Getting ready for the **WU hackathon on Oct 24** — after Hack-Nation, hungry for round two
 - 🔭 Going deeper into **LLMs, agents & AI-driven analytics**
 - 📦 Shipping **local-first open source** — [garmindeck](https://github.com/hannokuegler/garmindeck), [blurt](https://github.com/hannokuegler/blurt) & [mailctx](https://github.com/hannokuegler/mailctx) (issues and stars very welcome ⭐)
 - 🧩 Hardening Landa: more tests, better observability, cheaper models where they're good enough
-- 🤝 Open to collaborating on **AI/LLM, data science, energy & sustainability** projects
+- 🤝 Open to collaborating on **AI/LLM, health-tech, data science, energy & sustainability** projects — and always up for a hackathon team
 
 ---
 
@@ -140,6 +166,9 @@ A playful but pointed LLM app (built for WU's *Applications of Data Science: LLM
 
 ![Anthropic](https://img.shields.io/badge/Claude-D97757?style=for-the-badge&logo=anthropic&logoColor=white)
 ![OpenAI](https://img.shields.io/badge/OpenAI-412991?style=for-the-badge&logo=openai&logoColor=white)
+![Next.js](https://img.shields.io/badge/Next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white)
+![Swift](https://img.shields.io/badge/swift-F54A2A?style=for-the-badge&logo=swift&logoColor=white)
+![Vercel](https://img.shields.io/badge/vercel-%23000000.svg?style=for-the-badge&logo=vercel&logoColor=white)
 ![Hugging Face](https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-FFD21E?style=for-the-badge)
 ![Pandas](https://img.shields.io/badge/pandas-%23150458.svg?style=for-the-badge&logo=pandas&logoColor=white)
 ![NumPy](https://img.shields.io/badge/numpy-%23013243.svg?style=for-the-badge&logo=numpy&logoColor=white)
