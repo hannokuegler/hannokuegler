@@ -55,7 +55,7 @@ curl -fsSL https://raw.githubusercontent.com/hannokuegler/tu_vpn/main/install.sh
 
 A private system of ~20 scheduled pipelines around a Markdown knowledge base, running on my own **NixOS server**. It writes my morning report, keeps my calendar and tasks in sync, tracks my training and answers my emails.
 
-| | |
+| Layer | How it works |
 |---|---|
 | ⚙️ **Architecture** | `systemd` timers → shell runners → headless **Claude Code** (`claude -p`) with custom skills → typed Python scripts. The model decides, deterministic code executes. |
 | 🧑‍💼 **Multi-agent org** | An orchestrator turns ideas into written work orders for role agents (engineering, operations, admin). A **blind reviewer** sees only the order and the test commands — never the builder's report — and has to verify the result before it counts. |
